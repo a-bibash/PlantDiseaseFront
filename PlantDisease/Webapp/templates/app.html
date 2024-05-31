@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+
+{% block home %}
+{% load static %}
+
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand"></a>
+        <form class="d-flex" method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button class="btn btn-outline-success" type="submit">Logout</button>
+        </form>
+    </div>
+</nav>
+
+  
+<body>
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<script src="{% static 'script.js' %}"></script>
+
+
+
+<div class="container">
+    <h1>Plant Disease Prediction</h1>
+    <div class="form-group">
+        <label for="imageUpload">Upload Plant Image:</label>
+        <div id="dropzone" class="dropzone">Drag and drop an image here or click to select a file</div>
+        <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+    </div>
+    <div id="imagePreview"></div>
+    <button id="predictButton" disabled>Predict</button>
+    <div id="result">Here will be result</div>
+    <div id="suggestions">Here will the suggestion</div>
+</div>
+
+
+
+
+</body> 
+{% endblock %}
