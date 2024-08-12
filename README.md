@@ -42,7 +42,7 @@ To set up and run the project locally, follow these steps:
     
     Copy code
     
-    `cd tomato-disease-detection` 
+    `cd PlantProject` 
     
 4.  **Create a Virtual Environment**
    
